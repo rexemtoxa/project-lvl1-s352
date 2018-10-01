@@ -10,10 +10,7 @@
   "license": "ISC",
   "description": "some game",
   "dependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0"
+    "readline-sync": "^1.4.9"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -21,7 +18,12 @@
   "files": [
     "dist"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rexemtoxa/project-lvl1-s352.git"
