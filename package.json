@@ -1,7 +1,7 @@
 {
   "name": "brain-game_ar",
-  "version": "1.0.1",
-  "main": "dist/bin/brain-games.js",
+  "version": "1.0.2",
+  "main": "src/index.js",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
@@ -13,7 +13,7 @@
     "readline-sync": "^1.4.9"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/index.js"
   },
   "files": [
     "dist"
