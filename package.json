@@ -1,29 +1,33 @@
 {
   "name": "brain-game_ar",
-  "version": "1.0.2",
-  "main": "src/index.js",
+  "version": "1.0.5",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
-  "author": "",
+  "author": "Anton Rehemae",
   "license": "ISC",
   "description": "some game",
   "dependencies": {
     "readline-sync": "^1.4.9"
   },
-  "bin": {
-    "brain-games": "dist/index.js"
-  },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0"
+    "@babel/preset-env": "^7.1.0",
+    "eslint": "^5.6.1"
   },
+  "keywords": [
+    "brain-games",
+    "brain games"
+  ],
+  "bin": {
+    "brain-games": "src/bin/brain-games.js"
+   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rexemtoxa/project-lvl1-s352.git"
