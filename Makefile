@@ -4,6 +4,9 @@ start:
 	npx babel-node -- src/bin/brain-games.js
 publish:
 	npm run prepublishOnly
-
 lint:
 	npx eslint .
+even:
+	npx babel-node -- src/bin/brain-even.js
+        
+
