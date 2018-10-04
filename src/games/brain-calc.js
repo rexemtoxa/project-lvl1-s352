@@ -17,11 +17,7 @@ const makeBrainGameCalc = () => {
       question: `${num1} * ${num2}`,
       answer: num1 * num2,
     };
-    const listOperations = [
-      sum,
-      diff,
-      mult,
-    ];
+    const listOperations = [sum, diff, mult];
     return listOperations[getRandomNum(listOperations.length)];
   };
   const rules = `What is the result of the expression?

@@ -23,7 +23,6 @@ const startGame = () => {
     lastAnswer = isTrue;
     return isTrue ? 'Correct!' : `${userAnswer} is wrong answer ;(. Correct answer was ${getCorrectAncwer(question)}.`;
   };
-
   for (let round = 1; round <= maxCorrectAnswer; round += 1) {
     if (lastAnswer) console.log(getIterAnswer());
     else {
