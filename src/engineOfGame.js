@@ -1,23 +1,24 @@
 import readlineSync from 'readline-sync';
+import { maxCorrectAnswer } from './functionAndData';
 
-const startGame = (testGenerator, rules) => {
+
+const startGame = (testGenerator, description) => {
   console.log('Welcome to the Brain Games!');
-  console.log(rules);
+  console.log(`${description}\n`);
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  const maxCurrectAnswer = 3;
-  const printCongratulations = () => console.log(`Congratulations, ${userName}!`);
+  console.log(`Hello, ${userName}!\n`);
 
-  const startTest = (assessment = '', amountRightAnswer = 0) => {
-    if (amountRightAnswer !== maxCurrectAnswer) {
-      console.log(assessment);
-      const test = testGenerator();
-      console.log(`Question: ${test.question}`);
-      const userAnswer = readlineSync.question('Your answer: ');
-      return (userAnswer === `${test.answer}` ? startTest('Correct!', amountRightAnswer + 1) : console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${test.answer}. Let's try again, ${userName}!`));
+  for (let round = 1; round <= maxCorrectAnswer; round += 1) {
+    const test = testGenerator();
+    console.log(`Question: ${test.question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    const isTrue = userAnswer === `${test.answer}`;
+    if (isTrue) console.log('Correct');
+    else {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${test.answer}.`);
+      break;
     }
-    return printCongratulations();
-  };
-  return startTest();
+    console.log(`Congratulations, ${userName}!`);
+  }
 };
 export default startGame;
