@@ -10,5 +10,5 @@
 
 [brain-calc](https://asciinema.org/a/q5uLZSAMAlHsBUihutG6LyDgm)
 
-[brain-gcd](https://asciinema.org/a/63RxShRQ6WIkg9QrlX0em1gPC)
+[brain-gcd](https://asciinema.org/a/CuTVvVJfiqQa0tkiP1i3qvZIu)
 
