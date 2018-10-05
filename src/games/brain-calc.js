@@ -24,7 +24,7 @@ const selectTest = () => {
   return test;
 };
 const makeBrainGameCalc = () => {
-  const rules = 'What is the result of the expression?';
-  return startGame(selectTest, rules);
+  const description = 'What is the result of the expression?';
+  return startGame(selectTest, description);
 };
 export default makeBrainGameCalc;
