@@ -1,5 +1,10 @@
 import startGame from '../engineOfGame';
-import { getRandomNum, GetBiggestDividor } from '../functionAndData';
+import { getRandomNum } from '../functionAndData';
+
+const GetBiggestDividor = (num1, num2) => {
+  if (num1 === 0) return num2;
+  return GetBiggestDividor(num2 % num1, num1);
+};
 
 const makeTest = () => {
   const num1 = getRandomNum(0, 100);

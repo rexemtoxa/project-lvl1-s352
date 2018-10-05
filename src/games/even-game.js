@@ -15,9 +15,9 @@ const startGame = () => {
     if (isTrue) console.log('Correct');
     else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${getCorrectAncwer(question)}.`);
-      break;
+      return;
     }
-    console.log(`Congratulations, ${userName}!`);
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 export default startGame;
