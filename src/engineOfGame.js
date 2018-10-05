@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 import { maxCorrectAnswer } from './functionAndData';
 
-
 const startGame = (testGenerator, description) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${description}\n`);
@@ -18,7 +17,7 @@ const startGame = (testGenerator, description) => {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${test.answer}.`);
       break;
     }
-    console.log(`Congratulations, ${userName}!`);
   }
+console.log(`Congratulations, ${userName}!`);
 };
 export default startGame;
