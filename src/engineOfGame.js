@@ -8,7 +8,7 @@ const startGame = (testGenerator, description) => {
   console.log(`Hello, ${userName}!\n`);
 
   for (let round = 1; round <= maxCorrectAnswer; round += 1) {
-    const {question, answer} =  testGenerator();
+    const { question, answer } = testGenerator();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const isTrue = userAnswer === `${answer}`;
