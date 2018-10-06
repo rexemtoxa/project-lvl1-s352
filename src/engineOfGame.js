@@ -12,7 +12,9 @@ const startGame = (testGenerator, description) => {
     console.log(`Question: ${test.question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const isTrue = userAnswer === `${test.answer}`;
-    if (isTrue) console.log('Correct');
+    if (isTrue) {
+      console.log('Correct');
+    }
     else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${test.answer}.`);
       return;

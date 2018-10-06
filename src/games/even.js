@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum} from '../utils';
+import getRandomNum from '../utils';
 
 const maxCorrectAnswer = 3;
 const isEven = num => (num % 2) === 0;
