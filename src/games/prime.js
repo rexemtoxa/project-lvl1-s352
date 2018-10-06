@@ -7,6 +7,7 @@ const isPrime = (num, divisor = 2) => {
   if (num % divisor === 0) return false;
   return divisor >= Math.sqrt(num) ? true : isPrime(num, divisor + 1);
 };
+
 const getCorrectAnswer = num => (isPrime(num) ? 'yes' : 'no');
 const makeTest = () => {
   const num = getRandomNum();

@@ -2,21 +2,21 @@ import startGame from '../engineOfGame';
 import getRandomNum from '../utils';
 
 const maxLength = 10;
-const generateProgression = (start, step, acc = []) => {
-  if (acc.length === maxLength) return acc;
-  const newList = acc.concat([start]);
-  return generateProgression(start + step, step, newList);
+const generateProgression = (accum, counter, hidden, step, start) => {
+  if (counter === maxLength) return accum;
+  if (counter === hidden) {
+    return generateProgression(`${accum} ..`, counter + 1, hidden, step, start);
+  }
+  return generateProgression(`${accum} ${counter * step + start}`, counter + 1, hidden, step, start);
 };
 
 const makeTest = () => {
-  const progression = generateProgression(getRandomNum(1, 10), getRandomNum(1, 10));
-  const hiddenElement = getRandomNum(0, progression.length);
-  const answer = progression[hiddenElement];
-  progression[hiddenElement] = '..';
-
+  const firstValue = getRandomNum();
+  const hiddenValue = getRandomNum(1, maxLength);
+  const step = getRandomNum(1, 10);
   const test = {
-    answer,
-    question: progression.join(','),
+    question: generateProgression(firstValue, 1, hiddenValue, step, firstValue),
+    answer: hiddenValue * step + firstValue,
   };
   return test;
 };
