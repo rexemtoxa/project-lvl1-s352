@@ -1,5 +1,5 @@
 import startGame from '../engineOfGame';
-import { getRandomNum } from '../functionAndData';
+import { getRandomNum } from '../utils';
 
 const maxLength = 10;
 const makeTest = () => {

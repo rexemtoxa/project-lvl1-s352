@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, getCorrectAncwer, maxCorrectAnswer } from '../functionAndData';
+import { getRandomNum, getCorrectAncwer, maxCorrectAnswer } from '../utils';
 
 const startGame = () => {
   console.log('Welcome to the Brain Games!');

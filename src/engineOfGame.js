@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { maxCorrectAnswer } from './functionAndData';
+import { maxCorrectAnswer } from './utils';
 
 const startGame = (testGenerator, description) => {
   console.log('Welcome to the Brain Games!');

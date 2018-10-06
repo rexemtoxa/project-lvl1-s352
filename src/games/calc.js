@@ -1,5 +1,5 @@
 import startGame from '../engineOfGame';
-import { getRandomNum } from '../functionAndData';
+import { getRandomNum } from '../utils';
 
 const selectTest = () => {
   const num1 = getRandomNum(0, 10);
