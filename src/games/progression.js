@@ -5,9 +5,7 @@ const maxLength = 10;
 const generateProgression = (hidden, step, start) => {
   const iter = (accum, counter) => {
     if (counter === maxLength) return accum;
-    if (counter === hidden) {
-      return iter(`${accum} ..`, counter + 1);
-    }
+    if (counter === hidden) return iter(`${accum} ..`, counter + 1);
     return iter(`${accum} ${counter * step + start}`, counter + 1);
   };
   return iter(start, 1);
