@@ -14,8 +14,7 @@ const startGame = (testGenerator, description) => {
     const isTrue = userAnswer === `${test.answer}`;
     if (isTrue) {
       console.log('Correct');
-    }
-    else {
+    } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${test.answer}.`);
       return;
     }
