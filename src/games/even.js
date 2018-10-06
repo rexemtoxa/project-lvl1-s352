@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, maxCorrectAnswer } from '../utils';
+import { getRandomNum} from '../utils';
 
+const maxCorrectAnswer = 3;
 const isEven = num => (num % 2) === 0;
 const getCorrectAncwer = num => (isEven(num) ? 'yes' : 'no');
 const startGame = () => {
