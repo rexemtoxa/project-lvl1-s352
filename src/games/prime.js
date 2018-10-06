@@ -1,24 +1,27 @@
 import startGame from '../engineOfGame';
 import getRandomNum from '../utils';
 
-const isPrime = (num, divisor = 2) => {
-  if (num === 1) return false;
-  if (num === 2) return true;
+const StartIter = (num, divisor) => {
   if (num % divisor === 0) return false;
-  return divisor >= Math.sqrt(num) ? true : isPrime(num, divisor + 1);
+  return divisor >= Math.sqrt(num) ? true : StartIter(num, divisor + 1);
+};
+
+const isPrime = (num) => {
+  if (num < 2) return false;
+  if (num === 2) return true;
+  return StartIter(num, 2);
 };
 
 const getCorrectAnswer = num => (isPrime(num) ? 'yes' : 'no');
-const makeTest = () => {
+const getTest = () => {
   const num = getRandomNum();
-  const test = {
+  return {
     question: num,
     answer: getCorrectAnswer(num),
   };
-  return test;
 };
 const makeBrainGamePrime = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return startGame(makeTest, description);
+  return startGame(getTest, description);
 };
 export default makeBrainGamePrime;

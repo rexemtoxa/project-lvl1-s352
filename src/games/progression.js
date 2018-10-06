@@ -10,19 +10,18 @@ const generateProgression = (accum, counter, hidden, step, start) => {
   return generateProgression(`${accum} ${counter * step + start}`, counter + 1, hidden, step, start);
 };
 
-const makeTest = () => {
+const getTest = () => {
   const firstValue = getRandomNum();
-  const hiddenValue = getRandomNum(1, maxLength);
+  const hiddenValue = getRandomNum(1, maxLength - 1);
   const step = getRandomNum(1, 10);
-  const test = {
+  return {
     question: generateProgression(firstValue, 1, hiddenValue, step, firstValue),
     answer: hiddenValue * step + firstValue,
   };
-  return test;
 };
 
 const makeBrainGameProgression = () => {
   const description = 'What number is missing in this progression?';
-  return startGame(makeTest, description);
+  return startGame(getTest, description);
 };
 export default makeBrainGameProgression;
