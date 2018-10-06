@@ -3,7 +3,7 @@ import getRandomNum from '../utils';
 
 const maxCorrectAnswer = 3;
 const isEven = num => (num % 2) === 0;
-const getCorrectAncwer = num => (isEven(num) ? 'yes' : 'no');
+const getCorrectAnswer = num => (isEven(num) ? 'yes' : 'no');
 const startGame = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no".\n');
@@ -14,10 +14,10 @@ const startGame = () => {
     const question = getRandomNum();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const isTrue = userAnswer === getCorrectAncwer(question);
+    const isTrue = userAnswer === getCorrectAnswer(question);
     if (isTrue) console.log('Correct');
     else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${getCorrectAncwer(question)}.`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${getCorrectAnswer(question)}.`);
       return;
     }
   }
