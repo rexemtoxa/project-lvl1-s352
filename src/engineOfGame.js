@@ -8,14 +8,14 @@ const startGame = (testGenerator, description) => {
   console.log(`Hello, ${userName}!\n`);
 
   for (let round = 1; round <= maxCorrectAnswer; round += 1) {
-    const test = testGenerator();
-    console.log(`Question: ${test.question}`);
+    const {question, answer} =  testGenerator();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const isTrue = userAnswer === `${test.answer}`;
+    const isTrue = userAnswer === `${answer}`;
     if (isTrue) {
       console.log('Correct');
     } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${test.answer}.`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}.`);
       return;
     }
   }
