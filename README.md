@@ -14,3 +14,4 @@ instruction:
 
 [brain-progression](https://asciinema.org/a/EoaBWnQODi6iClC4T7KXneNq4)
 
+[brain-prime](https://asciinema.org/a/7f50YWfYvs4oTAwdUdjKWGZLS)
