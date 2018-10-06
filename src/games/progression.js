@@ -3,19 +3,19 @@ import getRandomNum from '../utils';
 
 const maxLength = 10;
 const makeTest = () => {
-  const generateList = (value, step, acc = []) => {
+  const generateProgression = (start, step, acc = []) => {
     if (acc.length === maxLength) return acc;
-    const newList = acc.concat([value]);
-    return generateList(value + step, step, newList);
+    const newList = acc.concat([start]);
+    return generateProgression(start + step, step, newList);
   };
-  const list = generateList(getRandomNum(), getRandomNum());
-  const question = list.slice();
-  question.splice(getRandomNum(0, maxLength), 1, '..');
-  const getRightAnswer = (list1, list2) => list1.filter(el => !list2.has(el))[0];
+  const progression = generateProgression(getRandomNum(1, 10), getRandomNum(1, 10));
+  const hiddenElement = getRandomNum(0, progression.length);
+  const answer = progression[hiddenElement];
+  progression[hiddenElement] = '..';
 
   const test = {
-    question: question.join(','),
-    answer: getRightAnswer(list, new Set(question)),
+    answer,
+    question: progression.join(','),
   };
   return test;
 };
