@@ -25,6 +25,5 @@ const getTest = () => {
 };
 
 const description = 'What is the result of the expression?';
-const makeBrainGameCalc = () => startGame(getTest, description);
 
-export default makeBrainGameCalc;
+export default () => startGame(getTest, description);
