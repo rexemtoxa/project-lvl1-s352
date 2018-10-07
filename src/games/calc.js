@@ -1,7 +1,7 @@
 import startGame from '../engineOfGame';
 import { getRandomNum } from '../utils';
 
-const test = {};
+
 const getTest = () => {
   const num1 = getRandomNum(0, 10);
   const num2 = getRandomNum(0, 10);
@@ -9,19 +9,21 @@ const getTest = () => {
   const selectedOperation = getRandomNum(1, amountOperations);
   switch (selectedOperation) {
     case 1:
-      test.question = `${num1} - ${num2}`;
-      test.answer = `${num1 - num2}`;
-      break;
+      return {
+        question: `${num1} - ${num2}`,
+        answer: `${num1 - num2}`,
+      };
     case 2:
-      test.question = `${num1} * ${num2}`;
-      test.answer = `${num1 * num2}`;
-      break;
+      return {
+        question: `${num1} + ${num2}`,
+        answer: `${num1 + num2}`,
+      };
     default:
-      test.question = `${num1} + ${num2}`;
-      test.answer = `${num1 + num2}`;
-      break;
+      return {
+        question: `${num1} * ${num2}`,
+        answer: `${num1 * num2}`,
+      };
   }
-  return test;
 };
 
 const description = 'What is the result of the expression?';
