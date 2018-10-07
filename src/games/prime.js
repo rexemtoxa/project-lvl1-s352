@@ -3,9 +3,10 @@ import getRandomNum from '../utils';
 
 const isPrime = (num) => {
   if (num < 2) return false;
+  const sup =  Math.sqrt(num);
   const iter = (divisor) => {
     if (num % divisor === 0) return false;
-    return divisor >= Math.sqrt(num) ? true : iter(divisor + 1);
+    return divisor >= sup ? true : iter(divisor + 1);
   };
   return iter(2);
 };
