@@ -1,5 +1,5 @@
 import startGame from '../engineOfGame';
-import { getTest } from '../utils';
+import getRandomNum from '../utils';
 
 const isPrime = (num) => {
   if (num < 2) return false;
@@ -10,8 +10,15 @@ const isPrime = (num) => {
   return iter(2);
 };
 
-const getCorrectAnswer = num => (isPrime(num) ? 'yes' : 'no');
-const generateTest = () => getTest(getCorrectAnswer);
+const getTest = () => {
+  const question = getRandomNum();
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return {
+    question,
+    answer,
+  };
+};
+
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export default () => startGame(generateTest, description);
+export default () => startGame(getTest, description);
