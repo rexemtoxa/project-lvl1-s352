@@ -21,6 +21,5 @@ const getTest = () => {
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const makeBrainGamePrime = () => startGame(getTest, description);
 
-export default makeBrainGamePrime;
+export default () => startGame(getTest, description);

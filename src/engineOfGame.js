@@ -21,4 +21,5 @@ const startGame = (testGenerator, description) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
+
 export default startGame;

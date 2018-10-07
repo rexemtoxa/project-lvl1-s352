@@ -20,6 +20,5 @@ const getTest = () => {
   };
 };
 const description = 'What number is missing in this progression?';
-const makeBrainGameProgression = () => startGame(getTest, description);
 
-export default makeBrainGameProgression;
+export default () => startGame(getTest, description);

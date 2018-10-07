@@ -15,6 +15,5 @@ const getTest = () => {
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
-const makeBrainGameGcd = () => startGame(getTest, description);
 
-export default makeBrainGameGcd;
+export default () => startGame(getTest, description);

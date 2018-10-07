@@ -12,6 +12,5 @@ const getTest = () => {
 };
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
-const makeEvenGame = () => startGame(getTest, description);
 
-export default makeEvenGame;
+export default () => startGame(getTest, description);
