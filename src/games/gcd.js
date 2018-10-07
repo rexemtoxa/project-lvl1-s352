@@ -10,7 +10,7 @@ const getTest = () => {
   const num2 = getRandomNum(1, 10);
   return {
     question: `${num1} ${num2}`,
-    answer: GetBiggestDividor(num1, num2),
+    answer: `${GetBiggestDividor(num1, num2)}`,
   };
 };
 

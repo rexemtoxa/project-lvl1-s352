@@ -16,7 +16,7 @@ const getTest = () => {
   const num = getRandomNum();
   return {
     question: num,
-    answer: getCorrectAnswer(num),
+    answer: `${getCorrectAnswer(num)}`,
   };
 };
 

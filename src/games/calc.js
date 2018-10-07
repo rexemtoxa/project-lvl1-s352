@@ -10,15 +10,15 @@ const getTest = () => {
   switch (selectedOperation) {
     case 1:
       test.question = `${num1} + ${num2}`;
-      test.answer = num1 + num2;
+      test.answer = `${num1 + num2}`;
       break;
     case 2:
       test.question = `${num1} - ${num2}`;
-      test.answer = num1 - num2;
+      test.answer = `${num1 - num2}`;
       break;
     default:
       test.question = `${num1} * ${num2}`;
-      test.answer = num1 * num2;
+      test.answer = `${num1 * num2}`;
       break;
   }
   return test;

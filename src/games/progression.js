@@ -16,7 +16,7 @@ const getTest = () => {
   const step = getRandomNum(1, 10);
   return {
     question: generateProgression(hiddenElementPosition, step, firstValue, 10),
-    answer: hiddenElementPosition * step + firstValue,
+    answer: `${hiddenElementPosition * step + firstValue}`,
   };
 };
 const description = 'What number is missing in this progression?';
