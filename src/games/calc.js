@@ -23,8 +23,8 @@ const getTest = () => {
   }
   return test;
 };
-const makeBrainGameCalc = () => {
-  const description = 'What is the result of the expression?';
-  return startGame(getTest, description);
-};
+
+const description = 'What is the result of the expression?';
+const makeBrainGameCalc = () => startGame(getTest, description);
+
 export default makeBrainGameCalc;

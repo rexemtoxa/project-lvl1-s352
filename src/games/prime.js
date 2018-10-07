@@ -20,8 +20,7 @@ const getTest = () => {
   };
 };
 
-const makeBrainGamePrime = () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return startGame(getTest, description);
-};
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const makeBrainGamePrime = () => startGame(getTest, description);
+
 export default makeBrainGamePrime;

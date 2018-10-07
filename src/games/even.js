@@ -10,6 +10,7 @@ const getTest = () => {
     answer: getCorrectAnswer(num),
   };
 };
+
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const makeEvenGame = () => startGame(getTest, description);
 
