@@ -1,16 +1,9 @@
 import startGame from '../engineOfGame';
-import getRandomNum from '../utils';
+import { getTest } from '../utils';
 
 const isEven = num => (num % 2) === 0;
 const getCorrectAnswer = num => (isEven(num) ? 'yes' : 'no');
-const getTest = () => {
-  const num = getRandomNum();
-  return {
-    question: num,
-    answer: `${getCorrectAnswer(num)}`,
-  };
-};
-
+const generateTest = () => getTest(getCorrectAnswer);
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
-export default () => startGame(getTest, description);
+export default () => startGame(generateTest, description);

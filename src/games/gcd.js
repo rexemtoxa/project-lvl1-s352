@@ -1,5 +1,5 @@
 import startGame from '../engineOfGame';
-import getRandomNum from '../utils';
+import { getRandomNum } from '../utils';
 
 const getBiggestDividor = (num1, num2) => {
   if (num1 === 0) return num2;

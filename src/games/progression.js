@@ -1,5 +1,5 @@
 import startGame from '../engineOfGame';
-import getRandomNum from '../utils';
+import { getRandomNum } from '../utils';
 
 const generateProgression = (hidden, step, start, length) => {
   const iter = (accum, counter) => {
